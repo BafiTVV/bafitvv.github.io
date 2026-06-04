@@ -33,7 +33,9 @@
             margin: 20px auto;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
         nav a {
             color: #666666;
@@ -46,6 +48,31 @@
         nav a:hover {
             color: #ffffff;
             transform: translateY(-2px);
+        }
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+            border-left: 1px solid #222222;
+            padding-left: 20px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #444444;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .lang-btn:hover {
+            color: #ffffff;
+        }
+        .lang-btn.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
         }
         header {
             max-width: 800px;
@@ -220,6 +247,11 @@
             letter-spacing: 1px;
         }
 
+        /* Třídy pro přepínání jazyků */
+        [lang="en"] {
+            display: none;
+        }
+
         @keyframes fadeInPage {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -239,190 +271,373 @@
 <body>
 
     <nav>
-        <a href="#sluzby">Služby</a>
-        <a href="#proces">Jak to funguje</a>
-        <a href="#cenik">Ceník</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#podminky">Podmínky</a>
+        <a href="#sluzby" class="cz-text">Služby</a>
+        <a href="#sluzby" class="en-text" lang="en">Services</a>
+        
+        <a href="#proces" class="cz-text">Jak to funguje</a>
+        <a href="#proces" class="en-text" lang="en">Workflow</a>
+        
+        <a href="#cenik" class="cz-text">Ceník</a>
+        <a href="#cenik" class="en-text" lang="en">Pricing</a>
+        
+        <a href="#kontakt" class="cz-text">Kontakt</a>
+        <a href="#kontakt" class="en-text" lang="en">Contact</a>
+        
+        <a href="#podminky" class="cz-text">Podmínky</a>
+        <a href="#podminky" class="en-text" lang="en">Terms</a>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('cz')">CZ</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
     </nav>
 
     <header>
         <h1>Timeline Studio</h1>
-        <p class="subtitle">Profesionální postprodukce a střih videa</p>
+        <p class="subtitle class-cz-inline cz-text">Profesionální postprodukce a střih videa</p>
+        <p class="subtitle class-en-inline en-text" lang="en">Professional post-production and video editing</p>
     </header>
 
     <main>
         <section id="sluzby">
-            <h2>Služby</h2>
+            <h2 class="cz-text">Služby</h2>
+            <h2 class="en-text" lang="en">Services</h2>
+            
             <div class="service-item">
                 <div class="service-title">Video Editing</div>
-                <div class="service-desc">Čistý a dynamický střih herních videí, IRL obsahu, reklam i krátkých formátů (Shorts/Reels).</div>
+                <div class="service-desc cz-text">Čistý a dynamický střih herních videí, IRL obsahu, reklam i krátkých formátů (Shorts/Reels).</div>
+                <div class="service-desc en-text" lang="en">Clean and dynamic editing of gaming videos, IRL content, commercials, and short-form content (Shorts/Reels).</div>
             </div>
             <div class="service-item">
                 <div class="service-title">Color Grading</div>
-                <div class="service-desc">Úprava barev, kontrastu a stylizace záběrů pro dosažení profesionálního filmového vzhledu.</div>
+                <div class="service-desc cz-text">Úprava barev, kontrastu a stylizace záběrů pro dosažení profesionálního filmového vzhledu.</div>
+                <div class="service-desc en-text" lang="en">Color correction, contrast adjustment, and grading to achieve a professional cinematic look.</div>
             </div>
             <div class="service-item">
                 <div class="service-title">Sound Design</div>
-                <div class="service-desc">Mix zvuku, výběr vhodné hudby, zvukové efekty a čištění audio stopy pro maximální zážitek.</div>
+                <div class="service-desc cz-text">Mix zvuku, výběr vhodné hudby, zvukové efekty a čištění audio stopy pro maximální zážitek.</div>
+                <div class="service-desc en-text" lang="en">Audio mixing, music selection, sound effects, and audio cleaning for the ultimate viewing experience.</div>
             </div>
         </section>
 
         <section id="proces">
-            <h2>Jak to funguje</h2>
+            <h2 class="cz-text">Jak to funguje</h2>
+            <h2 class="en-text" lang="en">How it works</h2>
+            
             <div class="workflow-step">
-                <span>1. Zadání a materiály</span>
-                <p class="service-desc">Pošlete mi svou představu a surové záběry přes cloudové úložiště.</p>
+                <span class="cz-text">1. Zadání a materiály</span>
+                <span class="en-text" lang="en">1. Briefing and Footage</span>
+                <p class="service-desc cz-text">Pošlete mi svou představu a surové záběry přes cloudové úložiště.</p>
+                <p class="service-desc en-text" lang="en">Send over your vision and raw footage via cloud storage.</p>
             </div>
             <div class="workflow-step">
-                <span>2. První verze a úpravy</span>
-                <p class="service-desc">Sestříhám první verzi videa, kterou si společně projdeme a doladíme detaily.</p>
+                <span class="cz-text">2. První verze a úpravy</span>
+                <span class="en-text" lang="en">2. First Draft & Revisions</span>
+                <p class="service-desc cz-text">Sestříhám první verzi videa, kterou si společně projdeme a doladíme detaily.</p>
+                <p class="service-desc en-text" lang="en">I will edit the first draft, which we will review together and refine the details.</p>
             </div>
             <div class="workflow-step">
-                <span>3. Finální export</span>
-                <p class="service-desc">Hotové video vyexportuji v maximální kvalitě připravené k okamžitému publikování.</p>
+                <span class="cz-text">3. Finální export</span>
+                <span class="en-text" lang="en">3. Final Delivery</span>
+                <p class="service-desc cz-text">Hotové video vyexportuji v maximální kvalitě připravené k okamžitému publikování.</p>
+                <p class="service-desc en-text" lang="en">I deliver the final video in maximum quality, ready for immediate publishing.</p>
             </div>
         </section>
 
         <section id="cenik">
-            <h2>Ceník</h2>
+            <h2 class="cz-text">Ceník</h2>
+            <h2 class="en-text" lang="en">Pricing</h2>
             <div class="price-box">
-                <p>Informace o cenách doplním později. Každý projekt je naceněn individuálně podle náročnosti střihu.</p>
+                <p class="cz-text">Informace o cenách doplním později. Každý projekt je naceněn individuálně podle náročnosti střihu.</p>
+                <p class="en-text" lang="en">Pricing information will be added later. Each project is priced individually based on editing complexity.</p>
             </div>
         </section>
 
         <section id="kontakt">
-            <h2>Kontakt</h2>
+            <h2 class="cz-text">Kontakt</h2>
+            <h2 class="en-text" lang="en">Contact</h2>
             <div class="contact-links">
-                <a href="mailto:bafitv.business@gmail.com" class="contact-btn">Napište mi e-mail</a>
+                <a href="mailto:bafitv.business@gmail.com" class="contact-btn cz-text">Napište mi e-mail</a>
+                <a href="mailto:bafitv.business@gmail.com" class="contact-btn en-text" lang="en">Send me an email</a>
                 <a href="https://instagram.com/TVŮJ_INSTAGRAM" target="_blank" class="contact-btn secondary">Instagram</a>
             </div>
         </section>
 
         <section id="podminky">
-            <h2>Podmínky a dokumenty</h2>
+            <h2 class="cz-text">Podmínky a dokumenty</h2>
+            <h2 class="en-text" lang="en">Terms and Documents</h2>
             
-            <div class="terms-meta">
+            <div class="terms-meta cz-text">
                 <p><strong>Provozovatel:</strong> Timeline Studio</p>
                 <p><strong>Kontaktní e-mail:</strong> bafitv.business@gmail.com</p>
                 <p><strong>Poslední aktualizace:</strong> 4. 6. 2026</p>
                 <p><strong>Informace o cookies:</strong> Tento web využívá cookies a analytický nástroj Google Analytics za účelem shromažďování anonymních technických dat o návštěvnosti a chování uživatelů, což nám pomáhá web neustále zabezpečovat a zlepšovat.</p>
             </div>
 
-            <div class="terms-block">
-                <div class="terms-section-title">Obchodní podmínky</div>
-                
-                <div class="terms-subtitle">1. Úvod</div>
-                <div class="terms-text">
-                    <p>Tyto obchodní podmínky upravují používání webových stránek Timeline Studio a poskytování služeb nabízených prostřednictvím tohoto webu. Používáním webových stránek souhlasíte s těmito podmínkami.</p>
+            <div class="terms-meta en-text" lang="en">
+                <p><strong>Operator:</strong> Timeline Studio</p>
+                <p><strong>Contact Email:</strong> bafitv.business@gmail.com</p>
+                <p><strong>Last Updated:</strong> June 4, 2026</p>
+                <p><strong>Cookie Information:</strong> This website uses cookies and Google Analytics to collect anonymous technical data on traffic and user behavior, which helps us continuously secure and improve the website.</p>
+            </div>
+
+            <!-- ČESKÁ VERZE PODMÍNEK -->
+            <div class="cz-text">
+                <div class="terms-block">
+                    <div class="terms-section-title">Obchodní podmínky</div>
+                    
+                    <div class="terms-subtitle">1. Úvod</div>
+                    <div class="terms-text">
+                        <p>Tyto obchodní podmínky upravují používání webových stránek Timeline Studio a poskytování služeb nabízených prostřednictvím tohoto webu. Používáním webových stránek souhlasíte s těmito podmínkami.</p>
+                    </div>
+
+                    <div class="terms-subtitle">2. Poskytované služby</div>
+                    <div class="terms-text">
+                        <p>Timeline Studio poskytuje služby v oblasti editace videí, grafického designu, tvorby digitálního obsahu a souvisejících kreativních služeb. Rozsah každé zakázky je vždy stanoven individuální dohodou mezi poskytovatelem a zákazníkem.</p>
+                    </div>
+
+                    <div class="terms-subtitle">3. Objednávka a realizace</div>
+                    <div class="terms-text">
+                        <p>Objednávka je považována za závaznou po vzájemném potvrzení ceny, rozsahu práce a termínu dokončení. Timeline Studio si vyhrazuje právo odmítnout zakázky obsahující nezákonný, urážlivý nebo nevhodný obsah.</p>
+                    </div>
+
+                    <div class="terms-subtitle">4. Platby</div>
+                    <div class="terms-text">
+                        <p>Cena služeb je stanovena individuálně podle náročnosti zakázky. Platba probíhá způsobem dohodnutým mezi zákazníkem a poskytovatelem.</p>
+                    </div>
+
+                    <div class="terms-subtitle">5. Odpovědnost</div>
+                    <div class="terms-text">
+                        <p>Timeline Studio nenese odpovědnost za škody vzniklé nesprávným použitím dodaných materiálů nebo za škody způsobené třetími stranami.</p>
+                    </div>
                 </div>
 
-                <div class="terms-subtitle">2. Poskytované služby</div>
-                <div class="terms-text">
-                    <p>Timeline Studio poskytuje služby v oblasti editace videí, grafického designu, tvorby digitálního obsahu a souvisejících kreativních služeb. Rozsah každé zakázky je vždy stanoven individuální dohodou mezi poskytovatelem a zákazníkem.</p>
+                <div class="terms-block">
+                    <div class="terms-section-title">Autorská práva a materiály</div>
+
+                    <div class="terms-subtitle">1. Vlastnictví obsahu</div>
+                    <div class="terms-text">
+                        <p>Veškerý obsah zveřejněný na webu Timeline Studio, včetně textů, grafiky, loga, videí, ukázek prací and designových prvků, je chráněn autorským právem.</p>
+                    </div>
+
+                    <div class="terms-subtitle">2. Portfolio</div>
+                    <div class="terms-text">
+                        <p>Ukázky prací slouží výhradně k prezentaci schopností a zkušeností Timeline Studio. Bez předchozího souhlasu autora není dovoleno obsah kopírovat, upravovat, prodávat ani dále šířit.</p>
+                    </div>
+
+                    <div class="terms-subtitle">3. Práva k dokončeným zakázkám</div>
+                    <div class="terms-text">
+                        <p>Po uhrazení zakázky získává zákazník práva k používání díla v rozsahu sjednaném při objednávce. Timeline Studio si vyhrazuje právo použít dokončenou práci jako referenci v portfoliu, pokud není písemně dohodnuto jinak.</p>
+                    </div>
+
+                    <div class="terms-subtitle">4. Porušení autorských práv</div>
+                    <div class="terms-text">
+                        <p>Neoprávněné používání obsahu může vést k podniknutí právních kroků v souladu s platnými právními předpisy.</p>
+                    </div>
                 </div>
 
-                <div class="terms-subtitle">3. Objednávka a realizace</div>
-                <div class="terms-text">
-                    <p>Objednávka je považována za závaznou po vzájemném potvrzení ceny, rozsahu práce a termínu dokončení. Timeline Studio si vyhrazuje právo odmítnout zakázky obsahující nezákonný, urážlivý nebo nevhodný obsah.</p>
-                </div>
+                <div class="terms-block">
+                    <div class="terms-section-title">Ochrana osobních údajů (GDPR)</div>
 
-                <div class="terms-subtitle">4. Platby</div>
-                <div class="terms-text">
-                    <p>Cena služeb je stanovena individuálně podle náročnosti zakázky. Platba probíhá způsobem dohodnutým mezi zákazníkem a poskytovatelem.</p>
-                </div>
+                    <div class="terms-subtitle">1. Správce údajů</div>
+                    <div class="terms-text">
+                        <p>Správcem osobních údajů je Timeline Studio.</p>
+                    </div>
 
-                <div class="terms-subtitle">5. Odpovědnost</div>
-                <div class="terms-text">
-                    <p>Timeline Studio nenese odpovědnost za škody vzniklé nesprávným použitím dodaných materiálů nebo za škody způsobené třetími stranami.</p>
+                    <div class="terms-subtitle">2. Jaké údaje zpracováváme</div>
+                    <div class="terms-text">
+                        <p>Můžeme zpracovávat následující údaje:</p>
+                        <ul>
+                            <li>jméno nebo přezdívku,</li>
+                            <li>e-mailovou adresu,</li>
+                            <li>obsah zprávy,</li>
+                            <li>technické údaje nezbytné pro fungování webu.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-subtitle">3. Účel zpracování</div>
+                    <div class="terms-text">
+                        <p>Osobní údaje jsou zpracovávány za účelem:</p>
+                        <ul>
+                            <li>komunikace se zákazníky,</li>
+                            <li>vyřízení objednávek a poptávek,</li>
+                            <li>zlepšování služeb,</li>
+                            <li>zabezpečení webu.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-subtitle">4. Doba uchování</div>
+                    <div class="terms-text">
+                        <p>Osobní údaje uchováváme pouze po dobu nezbytně nutnou k naplnění účelu jejich zpracování nebo po dobu vyžadovanou zákonem.</p>
+                    </div>
+
+                    <div class="terms-subtitle">5. Práva uživatelů</div>
+                    <div class="terms-text">
+                        <p>Každý uživatel má právo:</p>
+                        <ul>
+                            <li>na přístup ke svým údajům,</li>
+                            <li>na opravu údajů,</li>
+                            <li>na výmaz údajů,</li>
+                            <li>na omezení zpracování,</li>
+                            <li>vznést námitku proti zpracování,</li>
+                            <li>podat stížnost u Úřad pro ochranu osobních údajů.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-subtitle">6. Kontakt</div>
+                    <div class="terms-text">
+                        <p>Pro dotazy týkající se ochrany osobních údajů nebo poskytovaných služeb kontaktujte:<br>
+                        <strong>Timeline Studio</strong><br>
+                        E-mail: bafitv.business@gmail.com</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="terms-block">
-                <div class="terms-section-title">Autorská práva a materiály</div>
+            <!-- ANGLICKÁ VERZE PODMÍNEK -->
+            <div class="en-text" lang="en">
+                <div class="terms-block">
+                    <div class="terms-section-title">Terms and Conditions</div>
+                    
+                    <div class="terms-subtitle">1. Introduction</div>
+                    <div class="terms-text">
+                        <p>These terms and conditions govern the use of the Timeline Studio website and the services offered through it. By using this website, you agree to these terms.</p>
+                    </div>
 
-                <div class="terms-subtitle">1. Vlastnictví obsahu</div>
-                <div class="terms-text">
-                    <p>Veškerý obsah zveřejněný na webu Timeline Studio, včetně textů, grafiky, loga, videí, ukázek prací a designových prvků, je chráněn autorským právem.</p>
+                    <div class="terms-subtitle">2. Provided Services</div>
+                    <div class="terms-text">
+                        <p>Timeline Studio provides video editing, graphic design, digital content creation, and related creative services. The scope of each project is determined by an individual agreement between the provider and the client.</p>
+                    </div>
+
+                    <div class="terms-subtitle">3. Orders and Execution</div>
+                    <div class="terms-text">
+                        <p>An order is considered binding once the price, scope of work, and deadline are mutually confirmed. Timeline Studio reserves the right to refuse projects containing illegal, offensive, or inappropriate content.</p>
+                    </div>
+
+                    <div class="terms-subtitle">4. Payments</div>
+                    <div class="terms-text">
+                        <p>The price for services is set individually based on project complexity. Payment method is agreed upon between the client and the provider.</p>
+                    </div>
+
+                    <div class="terms-subtitle">5. Liability</div>
+                    <div class="terms-text">
+                        <p>Timeline Studio is not liable for damages resulting from the incorrect use of delivered materials or for damages caused by third parties.</p>
+                    </div>
                 </div>
 
-                <div class="terms-subtitle">2. Portfolio</div>
-                <div class="terms-text">
-                    <p>Ukázky prací slouží výhradně k prezentaci schopností a zkušeností Timeline Studio. Bez předchozího souhlasu autora není dovoleno obsah kopírovat, upravovat, prodávat ani dále šířit.</p>
+                <div class="terms-block">
+                    <div class="terms-section-title">Copyright and Materials</div>
+
+                    <div class="terms-subtitle">1. Content Ownership</div>
+                    <div class="terms-text">
+                        <p>All content published on the Timeline Studio website, including text, graphics, logos, videos, work samples, and design elements, is protected by copyright.</p>
+                    </div>
+
+                    <div class="terms-subtitle">2. Portfolio</div>
+                    <div class="terms-text">
+                        <p>Samples of work serve exclusively to present the skills and experience of Timeline Studio. Copying, modifying, selling, or distributing the content without prior consent is strictly prohibited.</p>
+                    </div>
+
+                    <div class="terms-subtitle">3. Rights to Completed Projects</div>
+                    <div class="terms-text">
+                        <p>Upon full payment, the client acquires the rights to use the work within the scope agreed upon in the order. Timeline Studio reserves the right to use the finished work as a reference in its portfolio, unless agreed otherwise in writing.</p>
+                    </div>
+
+                    <div class="terms-subtitle">4. Copyright Infringement</div>
+                    <div class="terms-text">
+                        <p>Unauthorized use of content may lead to legal action in accordance with applicable laws.</p>
+                    </div>
                 </div>
 
-                <div class="terms-subtitle">3. Práva k dokončeným zakázkám</div>
-                <div class="terms-text">
-                    <p>Po uhrazení zakázky získává zákazník práva k používání díla v rozsahu sjednaném při objednávce. Timeline Studio si vyhrazuje právo použít dokončenou práci jako referenci v portfoliu, pokud není písemně dohodnuto jinak.</p>
-                </div>
+                <div class="terms-block">
+                    <div class="terms-section-title">Privacy Policy (GDPR)</div>
 
-                <div class="terms-subtitle">4. Porušení autorských práv</div>
-                <div class="terms-text">
-                    <p>Neoprávněné používání obsahu může vést k podniknutí právních kroků v souladu s platnými právními předpisy.</p>
-                </div>
-            </div>
+                    <div class="terms-subtitle">1. Data Controller</div>
+                    <div class="terms-text">
+                        <p>The data controller is Timeline Studio.</p>
+                    </div>
 
-            <div class="terms-block">
-                <div class="terms-section-title">Ochrana osobních údajů (GDPR)</div>
+                    <div class="terms-subtitle">2. Data We Process</div>
+                    <div class="terms-text">
+                        <p>We may process the following data:</p>
+                        <ul>
+                            <li>name or nickname,</li>
+                            <li>email address,</li>
+                            <li>message content,</li>
+                            <li>technical data necessary for website operation.</li>
+                        </ul>
+                    </div>
 
-                <div class="terms-subtitle">1. Správce údajů</div>
-                <div class="terms-text">
-                    <p>Správcem osobních údajů je Timeline Studio.</p>
-                </div>
+                    <div class="terms-subtitle">3. Purpose of Processing</div>
+                    <div class="terms-text">
+                        <p>Personal data is processed for the purpose of:</p>
+                        <ul>
+                            <li>communicating with clients,</li>
+                            <li>processing orders and inquiries,</li>
+                            <li>improving services,</li>
+                            <li>website security.</li>
+                        </ul>
+                    </div>
 
-                <div class="terms-subtitle">2. Jaké údaje zpracováváme</div>
-                <div class="terms-text">
-                    <p>Můžeme zpracovávat následující údaje:</p>
-                    <ul>
-                        <li>jméno nebo přezdívku,</li>
-                        <li>e-mailovou adresu,</li>
-                        <li>obsah zprávy,</li>
-                        <li>technické údaje nezbytné pro fungování webu.</li>
-                    </ul>
-                </div>
+                    <div class="terms-subtitle">4. Retention Period</div>
+                    <div class="terms-text">
+                        <p>We retain personal data only for the time necessary to fulfill the purpose of processing or as required by law.</p>
+                    </div>
 
-                <div class="terms-subtitle">3. Účel zpracování</div>
-                <div class="terms-text">
-                    <p>Osobní údaje jsou zpracovávány za účelem:</p>
-                    <ul>
-                        <li>komunikace se zákazníky,</li>
-                        <li>vyřízení objednávek a poptávek,</li>
-                        <li>zlepšování služeb,</li>
-                        <li>zabezpečení webu.</li>
-                    </ul>
-                </div>
+                    <div class="terms-subtitle">5. User Rights</div>
+                    <div class="terms-text">
+                        <p>Every user has the right to:</p>
+                        <ul>
+                            <li>access their data,</li>
+                            <li>rectify data,</li>
+                            <li>erase data,</li>
+                            <li>restrict processing,</li>
+                            <li>object to processing,</li>
+                            <li>lodge a complaint with the Office for Personal Data Protection.</li>
+                        </ul>
+                    </div>
 
-                <div class="terms-subtitle">4. Doba uchování</div>
-                <div class="terms-text">
-                    <p>Osobní údaje uchováváme pouze po dobu nezbytně nutnou k naplnění účelu jejich zpracování nebo po dobu vyžadovanou zákonem.</p>
-                </div>
-
-                <div class="terms-subtitle">5. Práva uživatelů</div>
-                <div class="terms-text">
-                    <p>Každý uživatel má právo:</p>
-                    <ul>
-                        <li>na přístup ke svým údajům,</li>
-                        <li>na opravu údajů,</li>
-                        <li>na výmaz údajů,</li>
-                        <li>na omezení zpracování,</li>
-                        <li>vznést námitku proti zpracování,</li>
-                        <li>podat stížnost u Úřad pro ochranu osobních údajů.</li>
-                    </ul>
-                </div>
-
-                <div class="terms-subtitle">6. Kontakt</div>
-                <div class="terms-text">
-                    <p>Pro dotazy týkající se ochrany osobních údajů nebo poskytovaných služeb kontaktujte:<br>
-                    <strong>Timeline Studio</strong><br>
-                    E-mail: bafitv.business@gmail.com</p>
+                    <div class="terms-subtitle">6. Contact</div>
+                    <div class="terms-text">
+                        <p>For inquiries regarding personal data protection or provided services, contact:<br>
+                        <strong>Timeline Studio</strong><br>
+                        E-mail: bafitv.business@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; TIMELINE STUDIO. Všechna práva priviléga vyhrazená.</p>
+        <p>&copy; TIMELINE STUDIO. Všechna práva vyhrazena. | All rights reserved.</p>
     </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const czElements = document.querySelectorAll('.cz-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            if (lang === 'cz') {
+                czElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+                localStorage.setItem('preferredLang', 'cz');
+            } else {
+                czElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                buttons[0].classList.remove('active');
+                buttons[1].classList.add('active');
+                localStorage.setItem('preferredLang', 'en');
+            }
+        }
+
+        // Načtení uloženého jazyka při otevření webu
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'cz';
+            setLanguage(savedLang);
+        });
+    </script>
 
 </body>
 </html>
