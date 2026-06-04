@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
         body {
             background-color: #000000;
@@ -17,9 +18,27 @@
             line-height: 1.6;
             padding: 20px;
         }
+        nav {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #666666;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
         header {
             max-width: 800px;
-            margin: 80px auto 60px auto;
+            margin: 60px auto;
             text-align: center;
         }
         h1 {
@@ -39,17 +58,19 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        .services {
-            margin: 40px 0;
+        section {
+            padding: 60px 0;
             border-top: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
-            padding: 40px 0;
+        }
+        h2 {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-align: center;
         }
         .service-item {
             margin-bottom: 25px;
-        }
-        .service-item:last-child {
-            margin-bottom: 0;
         }
         .service-title {
             font-size: 1.2rem;
@@ -62,15 +83,27 @@
             color: #888888;
             font-size: 0.95rem;
         }
-        footer {
-            max-width: 800px;
-            margin: 60px auto 80px auto;
+        .price-box {
+            background: #050505;
+            border: 1px solid #1a1a1a;
+            padding: 30px;
             text-align: center;
+            color: #888888;
         }
-        .cta-text {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
+        .workflow-step {
+            margin-bottom: 20px;
+        }
+        .workflow-step span {
+            display: block;
+            font-weight: bold;
             color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
         .contact-btn {
             display: inline-block;
@@ -82,13 +115,39 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: background-color 0.2s;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
         }
         .contact-btn:hover {
             background-color: #cccccc;
         }
+        .contact-btn.secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #333333;
+        }
+        .contact-btn.secondary:hover {
+            border-color: #ffffff;
+        }
+        footer {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            color: #444444;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="#sluzby">Služby</a>
+        <a href="#proces">Jak to funguje</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 
     <header>
         <h1>Timeline Studio</h1>
@@ -96,7 +155,8 @@
     </header>
 
     <main>
-        <section class="services">
+        <section id="sluzby">
+            <h2>Služby</h2>
             <div class="service-item">
                 <div class="service-title">Video Editing</div>
                 <div class="service-desc">Čistý a dynamický střih herních videí, IRL obsahu, reklam i krátkých formátů (Shorts/Reels).</div>
@@ -110,11 +170,41 @@
                 <div class="service-desc">Mix zvuku, výběr vhodné hudby, zvukové efekty a čištění audio stopy pro maximální zážitek.</div>
             </div>
         </section>
+
+        <section id="proces">
+            <h2>Jak to funguje</h2>
+            <div class="workflow-step">
+                <span>1. Zadání a materiály</span>
+                <p class="service-desc">Pošlete mi svou představu a surové záběry přes cloudové úložiště.</p>
+            </div>
+            <div class="workflow-step">
+                <span>2. První verze a úpravy</span>
+                <p class="service-desc">Sestříhám první verzi videa, kterou si společně projdeme a doladíme detaily.</p>
+            </div>
+            <div class="workflow-step">
+                <span>3. Finální export</span>
+                <p class="service-desc">Hotové video vyexportuji v maximální kvalitě připravené k okamžitému publikování.</p>
+            </div>
+        </section>
+
+        <section id="cenik">
+            <h2>Ceník</h2>
+            <div class="price-box">
+                <p>Informace o cenách doplním později. Každý projekt je naceněn individuálně podle náročnosti střihu.</p>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <div class="contact-links">
+                <a href="mailto:bafitv.business@gmail.com" class="contact-btn">Napište mi e-mail</a>
+                <a href="https://instagram.com/bafi_889" target="_blank" class="contact-btn secondary">Instagram</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p class="cta-text">Máte zájem o spolupráci nebo cenovou nabídku?</p>
-        <a href="mailto:bafitv.business@gmail.com" class="contact-btn">Napište mi e-mail</a>
+        <p>&copy; TIMELINE STUDIO. Všechna práva vyhrazena.</p>
     </footer>
 
 </body>
