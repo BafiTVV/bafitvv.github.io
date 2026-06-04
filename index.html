@@ -155,6 +155,37 @@
             background-color: transparent;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
+        .terms-block {
+            margin-bottom: 25px;
+        }
+        .terms-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #cccccc;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .terms-text {
+            color: #666666;
+            font-size: 0.85rem;
+            text-align: justify;
+        }
+        .terms-text ul {
+            list-style: none;
+            margin-top: 5px;
+        }
+        .terms-text ul li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .terms-text ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #444444;
+        }
         footer {
             max-width: 800px;
             margin: 40px auto;
@@ -164,7 +195,6 @@
             letter-spacing: 1px;
         }
 
-        /* Definice animací */
         @keyframes fadeInPage {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -188,6 +218,7 @@
         <a href="#proces">Jak to funguje</a>
         <a href="#cenik">Ceník</a>
         <a href="#kontakt">Kontakt</a>
+        <a href="#podminky">Podmínky</a>
     </nav>
 
     <header>
@@ -240,6 +271,36 @@
             <div class="contact-links">
                 <a href="mailto:bafitv.business@gmail.com" class="contact-btn">Napište mi e-mail</a>
                 <a href="https://instagram.com/TVŮJ_INSTAGRAM" target="_blank" class="contact-btn secondary">Instagram</a>
+            </div>
+        </section>
+
+        <section id="podminky">
+            <h2>Podmínky spolupráce</h2>
+            
+            <div class="terms-block">
+                <div class="terms-title">1. Obchodní podmínky</div>
+                <div class="terms-text">
+                    <p>Zahájením spolupráce a odesláním podkladů klient souhlasí s následujícími pravidly:</p>
+                    <ul>
+                        <li>Cena za projekt je stanovena individuálně před zahájením prací na základě náročnosti zadání.</li>
+                        <li>V ceně každého projektu jsou zahrnuty maximálně 2 kola drobných úprav (revizí). Každé další kolo úprav nebo zásadní změna konceptu po schválení první verze jsou zpoplatněny extra.</li>
+                        <li>Pokud klient projekt zruší v průběhu rozpracování, zavazuje se uhradit poměrnou částku za již vykonanou práci.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="terms-block">
+                <div class="terms-title">2. Autorská práva a materiály</div>
+                <div class="terms-text">
+                    <p>Klient plně odpovídá za to, že veškeré dodané materiály (audio stopy, video záběry, grafika, hudba) neporušují autorská práva třetích stran. Editor neodpovídá za případné autorské nároky či penalizace platforem (např. YouTube Content ID). Vyhrazuji si právo hotové video (nebo jeho části) použít jako ukázku své práce ve svém portfoliu, pokud nebylo předem dohodnuto jinak.</p>
+                </div>
+            </div>
+
+            <div class="terms-block">
+                <div class="terms-title">3. Ochrana osobních údajů (GDPR)</div>
+                <div class="terms-text">
+                    <p>Odesláním e-mailu nebo zprávy berete na vědomí, že zpracovávám vaše kontaktní údaje (jméno, e-mail, sociální sítě) výhradně za účelem vyřízení poptávky a komunikace ohledně projektu. Tento web využívá bezplatný nástroj Google Analytics ke shromažďování anonymních statistik o návštěvnosti (počet zobrazení, typ zařízení), které slouží pouze ke zlepšování webu a neobsahují osobní data uživatelů.</p>
+                </div>
             </div>
         </section>
     </main>
