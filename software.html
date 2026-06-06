@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLW55WG9PG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', 'G-RLW55WG9PG');
+    </script>
+    <title>Timeline Studio | Software</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #000000; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; padding: 20px; animation: fadeInPage 1.2s ease-out; }
+        nav { max-width: 900px; margin: 20px auto; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+        nav a { color: #666666; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover, nav a.current { color: #ffffff; }
+        .lang-switch { display: flex; gap: 10px; margin-left: 10px; border-left: 1px solid #222222; padding-left: 20px; }
+        .lang-btn { background: none; border: none; color: #444444; cursor: pointer; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.3s ease; }
+        .lang-btn:hover, .lang-btn.active { color: #ffffff; }
+        .lang-btn.active { border-bottom: 2px solid #ffffff; }
+        header { max-width: 800px; margin: 60px auto; text-align: center; }
+        h1 { font-size: 2.8rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; }
+        main { max-width: 600px; margin: 0 auto; }
+        section { padding: 40px 0; border-top: 1px solid #1a1a1a; }
+        .software-box { background: #050505; border: 1px solid #1a1a1a; padding: 30px; margin-bottom: 25px; transition: border-color 0.3s ease; }
+        .software-box:hover { border-color: #333333; }
+        .software-title { font-size: 1.3rem; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+        .software-desc { color: #888888; font-size: 0.95rem; text-align: justify; }
+        footer { max-width: 800px; margin: 40px auto; text-align: center; color: #444444; font-size: 0.8rem; letter-spacing: 1px; }
+        [lang="en"] { display: none; }
+        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="cz-text">Úvod</a>
+        <a href="index.html" class="en-text" lang="en">Home</a>
+        <a href="sluzby.html" class="cz-text">Služby</a>
+        <a href="sluzby.html" class="en-text" lang="en">Services</a>
+        <a href="kontakt.html" class="cz-text">Kontakt</a>
+        <a href="kontakt.html" class="en-text" lang="en">Contact</a>
+        <a href="software.html" class="cz-text current">Software</a>
+        <a href="software.html" class="en-text current" lang="en">Software</a>
+        <a href="faq.html" class="cz-text">FAQ</a>
+        <a href="faq.html" class="en-text" lang="en">FAQ</a>
+        <a href="podminky.html" class="cz-text">Podmínky</a>
+        <a href="podminky.html" class="en-text" lang="en">Terms</a>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('cz')">CZ</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="cz-text">Používaný Software</h1>
+        <h1 class="en-text" lang="en">Software & Tools</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="software-box">
+                <div class="software-title">Adobe Premiere Pro</div>
+                <p class="software-desc cz-text">Můj hlavní nástroj pro pokročilý a profesionální střih. V Premiere Pro zpracovávám kompletní střihovou skladbu, složitější herní montáže, pracuji s pokročilým audio mixem, zvukové efekty synchronizuji na framy a dělám zde precizní color grading (úpravu barev a filmový vzhled záběrů).</p>
+                <p class="software-desc en-text" lang="en">My primary tool for advanced and professional video editing. In Premiere Pro, I handle complete timeline assembly, complex gaming montages, advanced audio mixing, frame-accurate sound effect synchronization, and precise color grading for a cinematic look.</p>
+            </div>
+
+            <div class="software-box">
+                <div class="software-title">ClipChamp</div>
+                <p class="software-desc cz-text">Efektivní a moderní software, který využívám pro rychlé zpracování, svižný střih a bleskový export kratších formátů, jako jsou YouTube Shorts, Instagram Reels nebo TikToky. Skvěle se hodí na dynamická videa, kde je potřeba okamžitý a čistý výstup bez nutnosti těžkých filmových efektů.</p>
+                <p class="software-desc en-text" lang="en">An efficient and modern software that I use for fast pacing, quick edits, and lightning-fast rendering of short-form content like YouTube Shorts, Instagram Reels, or TikToks. It is perfectly suited for dynamic videos that require an immediate, clean output without heavy cinematic effects.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; TIMELINE STUDIO. Všechna práva vyhrazena. | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const czElements = document.querySelectorAll('.cz-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const buttons = document.querySelectorAll('.lang-btn');
+            if (lang === 'cz') {
+                czElements.forEach(el => { if(!el.classList.contains('en-text')) el.style.display = 'block'; });
+                enElements.forEach(el => el.style.display = 'none');
+                buttons[0].classList.add('active'); buttons[1].classList.remove('active');
+                localStorage.setItem('preferredLang', 'cz');
+            } else {
+                czElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => { if(!el.classList.contains('cz-text')) el.style.display = 'block'; });
+                buttons[0].classList.remove('active'); buttons[1].classList.add('active');
+                localStorage.setItem('preferredLang', 'en');
+            }
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'cz';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
