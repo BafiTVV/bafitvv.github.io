@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLW55WG9PG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', 'G-RLW55WG9PG');
+    </script>
+    <title>Timeline Studio | Kontakt</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #000000; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; padding: 20px; animation: fadeInPage 1.2s ease-out; }
+        nav { max-width: 900px; margin: 20px auto; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+        nav a { color: #666666; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover, nav a.current { color: #ffffff; }
+        .lang-switch { display: flex; gap: 10px; margin-left: 10px; border-left: 1px solid #222222; padding-left: 20px; }
+        .lang-btn { background: none; border: none; color: #444444; cursor: pointer; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.3s ease; }
+        .lang-btn:hover, .lang-btn.active { color: #ffffff; }
+        .lang-btn.active { border-bottom: 2px solid #ffffff; }
+        header { max-width: 800px; margin: 60px auto; text-align: center; }
+        h1 { font-size: 2.8rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; }
+        main { max-width: 600px; margin: 0 auto; }
+        section { padding: 40px 0; border-top: 1px solid #1a1a1a; text-align: center; }
+        .contact-grid { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 40px; }
+        .contact-btn { display: inline-block; background-color: #ffffff; color: #000000; padding: 12px 35px; text-decoration: none; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; width: 100%; max-width: 300px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .contact-btn:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+        .social-btn { display: inline-block; background-color: transparent; color: #ffffff; border: 1px solid #222222; padding: 12px 35px; text-decoration: none; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; width: 100%; max-width: 300px; transition: border-color 0.3s ease, transform 0.3s ease; }
+        .social-btn:hover { border-color: #ffffff; transform: scale(1.02); }
+        footer { max-width: 800px; margin: 40px auto; text-align: center; color: #444444; font-size: 0.8rem; letter-spacing: 1px; }
+        [lang="en"] { display: none; }
+        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="cz-text">Úvod</a>
+        <a href="index.html" class="en-text" lang="en">Home</a>
+        <a href="sluzby.html" class="cz-text">Služby</a>
+        <a href="sluzby.html" class="en-text" lang="en">Services</a>
+        <a href="kontakt.html" class="cz-text current">Kontakt</a>
+        <a href="kontakt.html" class="en-text current" lang="en">Contact</a>
+        <a href="software.html" class="cz-text">Software</a>
+        <a href="software.html" class="en-text" lang="en">Software</a>
+        <a href="faq.html" class="cz-text">FAQ</a>
+        <a href="faq.html" class="en-text" lang="en">FAQ</a>
+        <a href="podminky.html" class="cz-text">Podmínky</a>
+        <a href="podminky.html" class="en-text" lang="en">Terms</a>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('cz')">CZ</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="cz-text">Kontaktujte Mě</h1>
+        <h1 class="en-text" lang="en">Get In Touch</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="contact-grid">
+                <a href="mailto:bafitv.business@gmail.com" class="contact-btn cz-text">Napište mi e-mail</a>
+                <a href="mailto:bafitv.business@gmail.com" class="contact-btn en-text" lang="en">Send an email</a>
+            </div>
+
+            <h2 class="cz-text">Sociální sítě</h2>
+            <h2 class="en-text" lang="en">Social Media</h2>
+            <div class="contact-grid">
+                <a href="https://discord.gg/TVŮJ_DISCORD" target="_blank" class="social-btn">Discord Server</a>
+                <a href="https://youtube.com/TVŮJ_YOUTUBE" target="_blank" class="social-btn">YouTube</a>
+                <a href="https://instagram.com/TVŮJ_INSTAGRAM" target="_blank" class="social-btn">Instagram</a>
+                <a href="https://tiktok.com/@TVŮJ_TIKTOK" target="_blank" class="social-btn">TikTok</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; TIMELINE STUDIO. Všechna práva vyhrazena. | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const czElements = document.querySelectorAll('.cz-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const buttons = document.querySelectorAll('.lang-btn');
+            if (lang === 'cz') {
+                czElements.forEach(el => { if(!el.classList.contains('en-text')) el.style.display = 'block'; });
+                enElements.forEach(el => el.style.display = 'none');
+                buttons[0].classList.add('active'); buttons[1].classList.remove('active');
+                localStorage.setItem('preferredLang', 'cz');
+            } else {
+                czElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => { if(!el.classList.contains('cz-text')) el.style.display = 'block'; });
+                buttons[0].classList.remove('active'); buttons[1].classList.add('active');
+                localStorage.setItem('preferredLang', 'en');
+            }
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'cz';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
