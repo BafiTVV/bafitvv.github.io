@@ -12,280 +12,49 @@
       gtag('config', 'G-RLW55WG9PG');
     </script>
 
-    <title>Timeline Studio | Video Edit</title>
+    <title>Timeline Studio | Home</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            animation: fadeInPage 1.2s ease-out;
-        }
-        nav {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #666666;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-        .lang-switch {
-            display: flex;
-            gap: 10px;
-            margin-left: 10px;
-            border-left: 1px solid #222222;
-            padding-left: 20px;
-        }
-        .lang-btn {
-            background: none;
-            border: none;
-            color: #444444;
-            cursor: pointer;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .lang-btn:hover {
-            color: #ffffff;
-        }
-        .lang-btn.active {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff;
-        }
-        header {
-            max-width: 800px;
-            margin: 60px auto;
-            text-align: center;
-            animation: fadeInUp 1s ease-out;
-        }
-        h1 {
-            font-size: 2.8rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .subtitle {
-            color: #666666;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        main {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        section {
-            padding: 60px 0;
-            border-top: 1px solid #1a1a1a;
-            animation: fadeInUp 1.4s ease-out;
-        }
-        h2 {
-            font-size: 1.6rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .service-item {
-            margin-bottom: 25px;
-            transition: transform 0.3s ease;
-        }
-        .service-item:hover {
-            transform: translateX(5px);
-        }
-        .service-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-        .service-desc {
-            color: #888888;
-            font-size: 0.95rem;
-        }
-        .price-box {
-            background: #050505;
-            border: 1px solid #1a1a1a;
-            padding: 30px;
-            text-align: center;
-            color: #888888;
-            transition: border-color 0.3s ease;
-        }
-        .price-box:hover {
-            border-color: #333333;
-        }
-        .workflow-step {
-            margin-bottom: 20px;
-        }
-        .workflow-step span {
-            display: block;
-            font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        .contact-btn {
-            display: inline-block;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 12px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .contact-btn:hover {
-            background-color: #ffffff;
-            transform: scale(1.03);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-        .contact-btn.secondary {
-            background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #333333;
-        }
-        .contact-btn.secondary:hover {
-            border-color: #ffffff;
-            background-color: transparent;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        }
-        .terms-meta {
-            background: #050505;
-            border: 1px solid #1a1a1a;
-            padding: 20px;
-            margin-bottom: 35px;
-            font-size: 0.9rem;
-            color: #888888;
-        }
-        .terms-meta p {
-            margin-bottom: 5px;
-        }
-        .terms-meta p strong {
-            color: #ffffff;
-        }
-        .terms-block {
-            margin-bottom: 30px;
-        }
-        .terms-section-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ffffff;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #1a1a1a;
-            padding-bottom: 5px;
-        }
-        .terms-subtitle {
-            font-size: 1.05rem;
-            font-weight: bold;
-            color: #cccccc;
-            margin-top: 15px;
-            margin-bottom: 8px;
-        }
-        .terms-text {
-            color: #888888;
-            font-size: 0.9rem;
-            text-align: justify;
-        }
-        .terms-text ul {
-            list-style: none;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-        .terms-text ul li {
-            margin-bottom: 5px;
-            position: relative;
-            padding-left: 15px;
-        }
-        .terms-text ul li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #444444;
-        }
-        footer {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
-            color: #444444;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
-
-        /* Třídy pro přepínání jazyků */
-        [lang="en"] {
-            display: none;
-        }
-
-        @keyframes fadeInPage {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #000000; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; padding: 20px; animation: fadeInPage 1.2s ease-out; }
+        nav { max-width: 900px; margin: 20px auto; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+        nav a { color: #666666; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover, nav a.current { color: #ffffff; }
+        .lang-switch { display: flex; gap: 10px; margin-left: 10px; border-left: 1px solid #222222; padding-left: 20px; }
+        .lang-btn { background: none; border: none; color: #444444; cursor: pointer; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.3s ease; }
+        .lang-btn:hover, .lang-btn.active { color: #ffffff; }
+        .lang-btn.active { border-bottom: 2px solid #ffffff; }
+        header { max-width: 800px; margin: 60px auto; text-align: center; animation: fadeInUp 1s ease-out; }
+        h1 { font-size: 2.8rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; }
+        .subtitle { color: #666666; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+        main { max-width: 600px; margin: 0 auto; }
+        section { padding: 60px 0; border-top: 1px solid #1a1a1a; animation: fadeInUp 1.4s ease-out; }
+        h2 { font-size: 1.6rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; text-align: center; }
+        .intro-text { color: #888888; font-size: 1rem; text-align: justify; margin-bottom: 20px; }
+        .price-box { background: #050505; border: 1px solid #1a1a1a; padding: 30px; text-align: center; color: #888888; margin-bottom: 25px; }
+        .info-block { margin-top: 25px; background: #050505; border: 1px solid #1a1a1a; padding: 25px; }
+        .info-title { font-size: 1.1rem; font-weight: bold; color: #ffffff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .info-desc { color: #888888; font-size: 0.95rem; }
+        footer { max-width: 800px; margin: 40px auto; text-align: center; color: #444444; font-size: 0.8rem; letter-spacing: 1px; }
+        [lang="en"] { display: none; }
+        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#sluzby" class="cz-text">Služby</a>
-        <a href="#sluzby" class="en-text" lang="en">Services</a>
-        
-        <a href="#proces" class="cz-text">Jak to funguje</a>
-        <a href="#proces" class="en-text" lang="en">Workflow</a>
-        
-        <a href="#cenik" class="cz-text">Ceník</a>
-        <a href="#cenik" class="en-text" lang="en">Pricing</a>
-        
-        <a href="#kontakt" class="cz-text">Kontakt</a>
-        <a href="#kontakt" class="en-text" lang="en">Contact</a>
-        
-        <a href="#podminky" class="cz-text">Podmínky</a>
-        <a href="#podminky" class="en-text" lang="en">Terms</a>
-
+        <a href="index.html" class="cz-text current">Úvod</a>
+        <a href="index.html" class="en-text current" lang="en">Home</a>
+        <a href="sluzby.html" class="cz-text">Služby</a>
+        <a href="sluzby.html" class="en-text" lang="en">Services</a>
+        <a href="kontakt.html" class="cz-text">Kontakt</a>
+        <a href="kontakt.html" class="en-text" lang="en">Contact</a>
+        <a href="software.html" class="cz-text">Software</a>
+        <a href="software.html" class="en-text" lang="en">Software</a>
+        <a href="faq.html" class="cz-text">FAQ</a>
+        <a href="faq.html" class="en-text" lang="en">FAQ</a>
+        <a href="podminky.html" class="cz-text">Podmínky</a>
+        <a href="podminky.html" class="en-text" lang="en">Terms</a>
         <div class="lang-switch">
             <button class="lang-btn active" onclick="setLanguage('cz')">CZ</button>
             <button class="lang-btn" onclick="setLanguage('en')">EN</button>
@@ -294,315 +63,40 @@
 
     <header>
         <h1>Timeline Studio</h1>
-        <p class="subtitle class-cz-inline cz-text">Profesionální postprodukce a střih videa</p>
-        <p class="subtitle class-en-inline en-text" lang="en">Professional post-production and video editing</p>
+        <p class="subtitle cz-text">Profesionální postprodukce a střih videa</p>
+        <p class="subtitle en-text" lang="en">Professional post-production and video editing</p>
     </header>
 
     <main>
-        <section id="sluzby">
-            <h2 class="cz-text">Služby</h2>
-            <h2 class="en-text" lang="en">Services</h2>
-            
-            <div class="service-item">
-                <div class="service-title">Video Editing</div>
-                <div class="service-desc cz-text">Čistý a dynamický střih herních videí, IRL obsahu, reklam i krátkých formátů (Shorts/Reels).</div>
-                <div class="service-desc en-text" lang="en">Clean and dynamic editing of gaming videos, IRL content, commercials, and short-form content (Shorts/Reels).</div>
-            </div>
-            <div class="service-item">
-                <div class="service-title">Color Grading</div>
-                <div class="service-desc cz-text">Úprava barev, kontrastu a stylizace záběrů pro dosažení profesionálního filmového vzhledu.</div>
-                <div class="service-desc en-text" lang="en">Color correction, contrast adjustment, and grading to achieve a professional cinematic look.</div>
-            </div>
-            <div class="service-item">
-                <div class="service-title">Sound Design</div>
-                <div class="service-desc cz-text">Mix zvuku, výběr vhodné hudby, zvukové efekty a čištění audio stopy pro maximální zážitek.</div>
-                <div class="service-desc en-text" lang="en">Audio mixing, music selection, sound effects, and audio cleaning for the ultimate viewing experience.</div>
-            </div>
-        </section>
-
-        <section id="proces">
-            <h2 class="cz-text">Jak to funguje</h2>
-            <h2 class="en-text" lang="en">How it works</h2>
-            
-            <div class="workflow-step">
-                <span class="cz-text">1. Zadání a materiály</span>
-                <span class="en-text" lang="en">1. Briefing and Footage</span>
-                <p class="service-desc cz-text">Pošlete mi svou představu a surové záběry přes cloudové úložiště.</p>
-                <p class="service-desc en-text" lang="en">Send over your vision and raw footage via cloud storage.</p>
-            </div>
-            <div class="workflow-step">
-                <span class="cz-text">2. První verze a úpravy</span>
-                <span class="en-text" lang="en">2. First Draft & Revisions</span>
-                <p class="service-desc cz-text">Sestříhám první verzi videa, kterou si společně projdeme a doladíme detaily.</p>
-                <p class="service-desc en-text" lang="en">I will edit the first draft, which we will review together and refine the details.</p>
-            </div>
-            <div class="workflow-step">
-                <span class="cz-text">3. Finální export</span>
-                <span class="en-text" lang="en">3. Final Delivery</span>
-                <p class="service-desc cz-text">Hotové video vyexportuji v maximální kvalitě připravené k okamžitému publikování.</p>
-                <p class="service-desc en-text" lang="en">I deliver the final video in maximum quality, ready for immediate publishing.</p>
-            </div>
+        <section id="o-mnes">
+            <h2 class="cz-text">O studiu</h2>
+            <h2 class="en-text" lang="en">About the Studio</h2>
+            <p class="intro-text cz-text">Vítá tě Timeline Studio. Zaměřuji se na moderní, dynamický a čistý střih digitálního obsahu. Ať už potřebuješ nadupané herní montáže, propracovaný sound design nebo svižné formáty pro sociální sítě, mým cílem je proměnit tvé surové záběry ve vizuální zážitek, který udrží pozornost diváků od první do poslední sekundy.</p>
+            <p class="intro-text en-text" lang="en">Welcome to Timeline Studio. I focus on modern, dynamic, and clean digital content editing. Whether you need high-energy gaming montages, advanced sound design, or fast-paced social media shorts, my goal is to turn your raw footage into an engaging visual experience that hooks your audience from start to finish.</p>
         </section>
 
         <section id="cenik">
-            <h2 class="cz-text">Ceník</h2>
-            <h2 class="en-text" lang="en">Pricing</h2>
-            <div class="price-box">
-                <p class="cz-text">Informace o cenách doplním později. Každý projekt je naceněn individuálně podle náročnosti střihu.</p>
-                <p class="en-text" lang="en">Pricing information will be added later. Each project is priced individually based on editing complexity.</p>
-            </div>
-        </section>
-
-        <section id="kontakt">
-            <h2 class="cz-text">Kontakt</h2>
-            <h2 class="en-text" lang="en">Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:bafitv.business@gmail.com" class="contact-btn cz-text">Napište mi e-mail</a>
-                <a href="mailto:bafitv.business@gmail.com" class="contact-btn en-text" lang="en">Send me an email</a>
-                <a href="https://instagram.com/TVŮJ_INSTAGRAM" target="_blank" class="contact-btn secondary">Instagram</a>
-            </div>
-        </section>
-
-        <section id="podminky">
-            <h2 class="cz-text">Podmínky a dokumenty</h2>
-            <h2 class="en-text" lang="en">Terms and Documents</h2>
+            <h2 class="cz-text">Ceník & Spolupráce</h2>
+            <h2 class="en-text" lang="en">Pricing & Cooperation</h2>
             
-            <div class="terms-meta cz-text">
-                <p><strong>Provozovatel:</strong> Timeline Studio</p>
-                <p><strong>Kontaktní e-mail:</strong> bafitv.business@gmail.com</p>
-                <p><strong>Poslední aktualizace:</strong> 4. 6. 2026</p>
-                <p><strong>Informace o cookies:</strong> Tento web využívá cookies a analytický nástroj Google Analytics za účelem shromažďování anonymních technických dat o návštěvnosti a chování uživatelů, což nám pomáhá web neustále zabezpečovat a zlepšovat.</p>
+            <div class="price-box">
+                <p class="cz-text">Informace o konkrétních cenách doplním později. Každý projekt je naceněn individuálně podle náročnosti, stopáže a stylu střihu.</p>
+                <p class="en-text" lang="en">Specific pricing details will be added later. Each project is priced individually based on complexity, duration, and editing style.</p>
             </div>
 
-            <div class="terms-meta en-text" lang="en">
-                <p><strong>Operator:</strong> Timeline Studio</p>
-                <p><strong>Contact Email:</strong> bafitv.business@gmail.com</p>
-                <p><strong>Last Updated:</strong> June 4, 2026</p>
-                <p><strong>Cookie Information:</strong> This website uses cookies and Google Analytics to collect anonymous technical data on traffic and user behavior, which helps us continuously secure and improve the website.</p>
+            <!-- NOVINKA V CENÍKU: Jak probíhá nacenění a platba -->
+            <div class="info-block">
+                <div class="info-title cz-text">Transparentní nacenění</div>
+                <div class="info-title en-text" lang="en">Transparent Pricing</div>
+                <p class="info-desc cz-text">Před začátkem práce se přesně dohodneme na finální částce. Cena, kterou si schválíme na začátku, je konečná – žádné skryté poplatky ani nečekané příplatky během střihu.</p>
+                <p class="info-desc en-text" lang="en">Before the editing begins, we will agree on an exact budget. The price we approve at the start is final – no hidden fees or unexpected charges during the process.</p>
             </div>
 
-            <!-- ČESKÁ VERZE PODMÍNEK -->
-            <div class="cz-text">
-                <div class="terms-block">
-                    <div class="terms-section-title">Obchodní podmínky</div>
-                    
-                    <div class="terms-subtitle">1. Úvod</div>
-                    <div class="terms-text">
-                        <p>Tyto obchodní podmínky upravují používání webových stránek Timeline Studio a poskytování služeb nabízených prostřednictvím tohoto webu. Používáním webových stránek souhlasíte s těmito podmínkami.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Poskytované služby</div>
-                    <div class="terms-text">
-                        <p>Timeline Studio poskytuje služby v oblasti editace videí, grafického designu, tvorby digitálního obsahu a souvisejících kreativních služeb. Rozsah každé zakázky je vždy stanoven individuální dohodou mezi poskytovatelem a zákazníkem.</p>
-                    </div>
-
-                    <div class="terms-subtitle">3. Objednávka a realizace</div>
-                    <div class="terms-text">
-                        <p>Objednávka je považována za závaznou po vzájemném potvrzení ceny, rozsahu práce a termínu dokončení. Timeline Studio si vyhrazuje právo odmítnout zakázky obsahující nezákonný, urážlivý nebo nevhodný obsah.</p>
-                    </div>
-
-                    <div class="terms-subtitle">4. Platby</div>
-                    <div class="terms-text">
-                        <p>Cena služeb je stanovena individuálně podle náročnosti zakázky. Platba probíhá způsobem dohodnutým mezi zákazníkem a poskytovatelem.</p>
-                    </div>
-
-                    <div class="terms-subtitle">5. Odpovědnost</div>
-                    <div class="terms-text">
-                        <p>Timeline Studio nenese odpovědnost za škody vzniklé nesprávným použitím dodaných materiálů nebo za škody způsobené třetími stranami.</p>
-                    </div>
-                </div>
-
-                <div class="terms-block">
-                    <div class="terms-section-title">Autorská práva a materiály</div>
-
-                    <div class="terms-subtitle">1. Vlastnictví obsahu</div>
-                    <div class="terms-text">
-                        <p>Veškerý obsah zveřejněný na webu Timeline Studio, včetně textů, grafiky, loga, videí, ukázek prací and designových prvků, je chráněn autorským právem.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Portfolio</div>
-                    <div class="terms-text">
-                        <p>Ukázky prací slouží výhradně k prezentaci schopností a zkušeností Timeline Studio. Bez předchozího souhlasu autora není dovoleno obsah kopírovat, upravovat, prodávat ani dále šířit.</p>
-                    </div>
-
-                    <div class="terms-subtitle">3. Práva k dokončeným zakázkám</div>
-                    <div class="terms-text">
-                        <p>Po uhrazení zakázky získává zákazník práva k používání díla v rozsahu sjednaném při objednávce. Timeline Studio si vyhrazuje právo použít dokončenou práci jako referenci v portfoliu, pokud není písemně dohodnuto jinak.</p>
-                    </div>
-
-                    <div class="terms-subtitle">4. Porušení autorských práv</div>
-                    <div class="terms-text">
-                        <p>Neoprávněné používání obsahu může vést k podniknutí právních kroků v souladu s platnými právními předpisy.</p>
-                    </div>
-                </div>
-
-                <div class="terms-block">
-                    <div class="terms-section-title">Ochrana osobních údajů (GDPR)</div>
-
-                    <div class="terms-subtitle">1. Správce údajů</div>
-                    <div class="terms-text">
-                        <p>Správcem osobních údajů je Timeline Studio.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Jaké údaje zpracováváme</div>
-                    <div class="terms-text">
-                        <p>Můžeme zpracovávat následující údaje:</p>
-                        <ul>
-                            <li>jméno nebo přezdívku,</li>
-                            <li>e-mailovou adresu,</li>
-                            <li>obsah zprávy,</li>
-                            <li>technické údaje nezbytné pro fungování webu.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">3. Účel zpracování</div>
-                    <div class="terms-text">
-                        <p>Osobní údaje jsou zpracovávány za účelem:</p>
-                        <ul>
-                            <li>komunikace se zákazníky,</li>
-                            <li>vyřízení objednávek a poptávek,</li>
-                            <li>zlepšování služeb,</li>
-                            <li>zabezpečení webu.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">4. Doba uchování</div>
-                    <div class="terms-text">
-                        <p>Osobní údaje uchováváme pouze po dobu nezbytně nutnou k naplnění účelu jejich zpracování nebo po dobu vyžadovanou zákonem.</p>
-                    </div>
-
-                    <div class="terms-subtitle">5. Práva uživatelů</div>
-                    <div class="terms-text">
-                        <p>Každý uživatel má právo:</p>
-                        <ul>
-                            <li>na přístup ke svým údajům,</li>
-                            <li>na opravu údajů,</li>
-                            <li>na výmaz údajů,</li>
-                            <li>na omezení zpracování,</li>
-                            <li>vznést námitku proti zpracování,</li>
-                            <li>podat stížnost u Úřad pro ochranu osobních údajů.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">6. Kontakt</div>
-                    <div class="terms-text">
-                        <p>Pro dotazy týkající se ochrany osobních údajů nebo poskytovaných služeb kontaktujte:<br>
-                        <strong>Timeline Studio</strong><br>
-                        E-mail: bafitv.business@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ANGLICKÁ VERZE PODMÍNEK -->
-            <div class="en-text" lang="en">
-                <div class="terms-block">
-                    <div class="terms-section-title">Terms and Conditions</div>
-                    
-                    <div class="terms-subtitle">1. Introduction</div>
-                    <div class="terms-text">
-                        <p>These terms and conditions govern the use of the Timeline Studio website and the services offered through it. By using this website, you agree to these terms.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Provided Services</div>
-                    <div class="terms-text">
-                        <p>Timeline Studio provides video editing, graphic design, digital content creation, and related creative services. The scope of each project is determined by an individual agreement between the provider and the client.</p>
-                    </div>
-
-                    <div class="terms-subtitle">3. Orders and Execution</div>
-                    <div class="terms-text">
-                        <p>An order is considered binding once the price, scope of work, and deadline are mutually confirmed. Timeline Studio reserves the right to refuse projects containing illegal, offensive, or inappropriate content.</p>
-                    </div>
-
-                    <div class="terms-subtitle">4. Payments</div>
-                    <div class="terms-text">
-                        <p>The price for services is set individually based on project complexity. Payment method is agreed upon between the client and the provider.</p>
-                    </div>
-
-                    <div class="terms-subtitle">5. Liability</div>
-                    <div class="terms-text">
-                        <p>Timeline Studio is not liable for damages resulting from the incorrect use of delivered materials or for damages caused by third parties.</p>
-                    </div>
-                </div>
-
-                <div class="terms-block">
-                    <div class="terms-section-title">Copyright and Materials</div>
-
-                    <div class="terms-subtitle">1. Content Ownership</div>
-                    <div class="terms-text">
-                        <p>All content published on the Timeline Studio website, including text, graphics, logos, videos, work samples, and design elements, is protected by copyright.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Portfolio</div>
-                    <div class="terms-text">
-                        <p>Samples of work serve exclusively to present the skills and experience of Timeline Studio. Copying, modifying, selling, or distributing the content without prior consent is strictly prohibited.</p>
-                    </div>
-
-                    <div class="terms-subtitle">3. Rights to Completed Projects</div>
-                    <div class="terms-text">
-                        <p>Upon full payment, the client acquires the rights to use the work within the scope agreed upon in the order. Timeline Studio reserves the right to use the finished work as a reference in its portfolio, unless agreed otherwise in writing.</p>
-                    </div>
-
-                    <div class="terms-subtitle">4. Copyright Infringement</div>
-                    <div class="terms-text">
-                        <p>Unauthorized use of content may lead to legal action in accordance with applicable laws.</p>
-                    </div>
-                </div>
-
-                <div class="terms-block">
-                    <div class="terms-section-title">Privacy Policy (GDPR)</div>
-
-                    <div class="terms-subtitle">1. Data Controller</div>
-                    <div class="terms-text">
-                        <p>The data controller is Timeline Studio.</p>
-                    </div>
-
-                    <div class="terms-subtitle">2. Data We Process</div>
-                    <div class="terms-text">
-                        <p>We may process the following data:</p>
-                        <ul>
-                            <li>name or nickname,</li>
-                            <li>email address,</li>
-                            <li>message content,</li>
-                            <li>technical data necessary for website operation.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">3. Purpose of Processing</div>
-                    <div class="terms-text">
-                        <p>Personal data is processed for the purpose of:</p>
-                        <ul>
-                            <li>communicating with clients,</li>
-                            <li>processing orders and inquiries,</li>
-                            <li>improving services,</li>
-                            <li>website security.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">4. Retention Period</div>
-                    <div class="terms-text">
-                        <p>We retain personal data only for the time necessary to fulfill the purpose of processing or as required by law.</p>
-                    </div>
-
-                    <div class="terms-subtitle">5. User Rights</div>
-                    <div class="terms-text">
-                        <p>Every user has the right to:</p>
-                        <ul>
-                            <li>access their data,</li>
-                            <li>rectify data,</li>
-                            <li>erase data,</li>
-                            <li>restrict processing,</li>
-                            <li>object to processing,</li>
-                            <li>lodge a complaint with the Office for Personal Data Protection.</li>
-                        </ul>
-                    </div>
-
-                    <div class="terms-subtitle">6. Contact</div>
-                    <div class="terms-text">
-                        <p>For inquiries regarding personal data protection or provided services, contact:<br>
-                        <strong>Timeline Studio</strong><br>
-                        E-mail: bafitv.business@gmail.com</p>
-                    </div>
-                </div>
+            <div class="info-block">
+                <div class="info-title cz-text">Garance 2 kol revizí</div>
+                <div class="info-title en-text" lang="en">2 Rounds of Revisions Guaranteed</div>
+                <p class="info-desc cz-text">Chci, aby byl výsledek stoprocentní. V ceně každé zakázky máš automaticky zahrnuta dvě kola úprav, kdy doladíme střih, hudbu nebo titulky přesně podle tvých připomínek.</p>
+                <p class="info-desc en-text" lang="en">I want you to be 100% satisfied. The price of every project automatically includes two rounds of revisions to tweak the pacing, music, or subtitles exactly to your liking.</p>
             </div>
         </section>
     </main>
@@ -616,28 +110,22 @@
             const czElements = document.querySelectorAll('.cz-text');
             const enElements = document.querySelectorAll('.en-text');
             const buttons = document.querySelectorAll('.lang-btn');
-
             if (lang === 'cz') {
-                czElements.forEach(el => el.style.display = 'block');
+                czElements.forEach(el => { if(!el.classList.contains('en-text')) el.style.display = 'block'; });
                 enElements.forEach(el => el.style.display = 'none');
-                buttons[0].classList.add('active');
-                buttons[1].classList.remove('active');
+                buttons[0].classList.add('active'); buttons[1].classList.remove('active');
                 localStorage.setItem('preferredLang', 'cz');
             } else {
                 czElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = 'block');
-                buttons[0].classList.remove('active');
-                buttons[1].classList.add('active');
+                enElements.forEach(el => { if(!el.classList.contains('cz-text')) el.style.display = 'block'; });
+                buttons[0].classList.remove('active'); buttons[1].classList.add('active');
                 localStorage.setItem('preferredLang', 'en');
             }
         }
-
-        // Načtení uloženého jazyka při otevření webu
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferredLang') || 'cz';
             setLanguage(savedLang);
         });
     </script>
-
 </body>
 </html>
