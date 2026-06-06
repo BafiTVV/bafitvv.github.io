@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLW55WG9PG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', 'G-RLW55WG9PG');
+    </script>
+    <title>Timeline Studio | Služby</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #000000; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; padding: 20px; animation: fadeInPage 1.2s ease-out; }
+        nav { max-width: 900px; margin: 20px auto; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+        nav a { color: #666666; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover, nav a.current { color: #ffffff; }
+        .lang-switch { display: flex; gap: 10px; margin-left: 10px; border-left: 1px solid #222222; padding-left: 20px; }
+        .lang-btn { background: none; border: none; color: #444444; cursor: pointer; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.3s ease; }
+        .lang-btn:hover, .lang-btn.active { color: #ffffff; }
+        .lang-btn.active { border-bottom: 2px solid #ffffff; }
+        header { max-width: 800px; margin: 60px auto; text-align: center; }
+        h1 { font-size: 2.8rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; }
+        main { max-width: 600px; margin: 0 auto; }
+        section { padding: 40px 0; border-top: 1px solid #1a1a1a; }
+        .service-item { background: #050505; border: 1px solid #1a1a1a; padding: 30px; margin-bottom: 25px; transition: border-color 0.3s ease; }
+        .service-item:hover { border-color: #333333; }
+        .service-title { font-size: 1.3rem; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+        .service-desc { color: #888888; font-size: 0.95rem; text-align: justify; }
+        footer { max-width: 800px; margin: 40px auto; text-align: center; color: #444444; font-size: 0.8rem; letter-spacing: 1px; }
+        [lang="en"] { display: none; }
+        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="cz-text">Úvod</a>
+        <a href="index.html" class="en-text" lang="en">Home</a>
+        <a href="sluzby.html" class="cz-text current">Služby</a>
+        <a href="sluzby.html" class="en-text current" lang="en">Services</a>
+        <a href="kontakt.html" class="cz-text">Kontakt</a>
+        <a href="kontakt.html" class="en-text" lang="en">Contact</a>
+        <a href="software.html" class="cz-text">Software</a>
+        <a href="software.html" class="en-text" lang="en">Software</a>
+        <a href="faq.html" class="cz-text">FAQ</a>
+        <a href="faq.html" class="en-text" lang="en">FAQ</a>
+        <a href="podminky.html" class="cz-text">Podmínky</a>
+        <a href="podminky.html" class="en-text" lang="en">Terms</a>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('cz')">CZ</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="cz-text">Nabízené Služby</h1>
+        <h1 class="en-text" lang="en">Our Services</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="service-item">
+                <div class="service-title">Video Editing</div>
+                <p class="service-desc cz-text">Kompletní střihová skladba herních videí, let's playů, stream highlights a IRL obsahu. Postarám se o perfektní tempo videa, vyříznutí nudných pasáží a přidání vtipných zoomů nebo memů. Nabízím také střih krátkých formátů na TikTok, YouTube Shorts a Instagram Reels s dynamickými titulky.</p>
+                <p class="service-desc en-text" lang="en">Complete video editing of gaming videos, let's plays, stream highlights, and IRL content. I handle the perfect pacing, cutting out dead space, and adding funny zooms or memes. I also offer short-form editing for TikTok, YouTube Shorts, and Instagram Reels with dynamic subtitles.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">Color Grading</div>
+                <p class="service-desc cz-text">Profesionální úprava barev a expozice. Sjednocuji barevný tón záběrů z různých kamer či herních zdrojů, opravuji vyvážení bílé, upravuji kontrast a dodávám videu specifickou stylizaci (filmový look, herní neonový nádech nebo čistý korporátní vzhled).</p>
+                <p class="service-desc en-text" lang="en">Professional color correction and grading. I unify the color tones of footage from different cameras or game sources, fix white balance, adjust contrast, and give the video a specific stylistic touch (cinematic look, vibrant gaming neon vibes, or clean corporate aesthetic).</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">Sound Design</div>
+                <p class="service-desc cz-text">Práce se zvukem je polovina úspěchu videa. Vyčistím tvou audio stopu od šumu, vyrovnám hlasitost hlasu a dodám trefné zvukové efekty (SFX), které podtrhnou dění na obrazovce. Vyberu také vhodnou podkresovou hudbu bez autorských práv, kterou přesně nasynchronizuji do rytmu střihu.</p>
+                <p class="service-desc en-text" lang="en">Sound design is half the video's success. I clean noise from your audio track, balance voice levels, and add impactful sound effects (SFX) to match the on-screen action. I also select the perfect copyright-safe background music and sync it perfectly to the beat of the edit.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; TIMELINE STUDIO. Všechna práva vyhrazena. | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const czElements = document.querySelectorAll('.cz-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const buttons = document.querySelectorAll('.lang-btn');
+            if (lang === 'cz') {
+                czElements.forEach(el => { if(!el.classList.contains('en-text')) el.style.display = 'block'; });
+                enElements.forEach(el => el.style.display = 'none');
+                buttons[0].classList.add('active'); buttons[1].classList.remove('active');
+                localStorage.setItem('preferredLang', 'cz');
+            } else {
+                czElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => { if(!el.classList.contains('cz-text')) el.style.display = 'block'; });
+                buttons[0].classList.remove('active'); buttons[1].classList.add('active');
+                localStorage.setItem('preferredLang', 'en');
+            }
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'cz';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
